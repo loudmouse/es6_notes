@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions → → </title>
+</head>
+<body>
+<script>
+  const names = ['wes', 'kait', 'lux'];
+  const fullNames = names.map(function(name) {
+    return `${name} bos`;
+  });
+
+// delete function and add =>
+// same as above
+  const fullNames2 = names.map((name) => {
+    return `${name} bos`;
+  });
+
+// if only 1 parameter the partenthesis are optional.
+// removed here around name
+  const fullNames3 = names.map(name => {
+    return `${name} bos`;
+  });
+
+// do an implicit return so the word return is not needed
+// remove return, delete curly brackets, and move up to one line.
+  const fullNames4 = names.map(name => `${name} bos`);
+
+// if there's no argument, pass empty parenthesis
+  const fullNames5 = names.map(() => `cool bos`);
+
+  console.log(fullNames5)
+
+</script>
+</body>
+</html>

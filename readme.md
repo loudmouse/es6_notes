@@ -6,8 +6,8 @@ You can find the course materials here: [es6.io](https://es6.io/)
 
 ---
 
-- [ ] New Variables — Creation, Updating and Scoping
-- [ ] Function Improvements: Arrows and Default Arguments
+- [x] New Variables — Creation, Updating and Scoping
+- [x] Function Improvements: Arrows and Default Arguments
 - [ ] Template Strings
 - [ ] Additional String Improvements
 - [ ] Destructuring

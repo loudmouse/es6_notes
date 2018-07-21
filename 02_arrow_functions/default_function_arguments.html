@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Default Arguments</title>
+</head>
+<body>
+<script>
+
+
+  // creates a function that requires an argument be passed for total
+  // however the tax and tip are optionally passed and if not they default to 0.13 and 0.15
+  function calculateBill(total, tax = 0.13, tip = 0.15) {
+    return total + (total * tax) + (total * tip);
+  }
+
+  // the below uses the 100 for total and then the default arguments for tax and tip from above
+  // const totalBill = calculateBill(100);
+
+  //  this below uses the 100 for total and a custom amount for tip of 25%
+  // but you pass it undefined as the argument for tax which then defaults to 0.13
+  const totalBill = calculateBill(100, undefined, 0.25)
+  console.log(totalBill);
+
+</script>
+</body>
+</html>
