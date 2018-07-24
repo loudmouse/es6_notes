@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  const person = {
+    name: 'Sadler Vaden',
+    job: 'Guitarist',
+    city: 'Myrtle Beach',
+    bio: 'Sadler plays guitar in Jason Isbell and the 400 Unit'
+  };
+
+  const markup = `
+    <div class="person">
+      <h2>
+        ${person.name} -
+        <span class="job">${person.job}</span>
+      </h2>
+      <p class="location">Location: ${person.city}</p>
+      <p class="bio">Bio: ${person.bio}</p>
+    </div>
+  `;
+
+  console.log(markup)
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  const songs = [
+    {
+    name: 'Tears of Rage',
+    artist: 'The Band',
+    featuring: 'Bob Dylan',
+    },
+    {
+    name: 'Way Over Yonder in the Minor Key',
+    artist: 'Billy Bragg',
+    featuring: 'Wilco',
+    },
+    {
+    name: 'Abandoned Mansion',
+    artist: 'Dr. Dog'
+    }
+  ];
+
+  const markup = `
+    <div class="songs">
+      ${songs.map(song => `
+        <p>
+          ${song.name} - ${song.artist}
+          ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+        </p>
+      `).join('')}
+     </div>
+  `;
+
+  console.log(markup)
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>

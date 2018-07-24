@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  const gyms = {
+    name: 'BKB',
+    city: 'Chicago',
+    climbs: ['bouldering', 'top rope', 'lead']
+  };
+
+  function renderClimbs(style) {
+    return `
+      <ul>
+        ${style.map(climb_style => `<li>${climb_style}</li>`).join('')}
+      </ul>
+    `;
+  };
+
+  const markup = `
+    <div class="gyms">
+      <h2>${gyms.name}</h2>
+      <p class="city">${gyms.city}</p>
+      ${renderClimbs(gyms.climbs)}
+    </div>
+  `;
+
+  console.log(markup)
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>

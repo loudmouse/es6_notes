@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+
+  const guitars = [
+    { name: 'Fender', age: 16 },
+    { name: 'Martin', age: 11 },
+    { name: 'Gretsch', age: 6 }
+  ];
+
+  const markup = `
+    <ul class="guitars">
+      ${guitars.map(guitar => `
+        <li>
+          My ${guitar.name} guitar is ${guitar.age} years old.
+        </li>
+      `).join('')}
+    </ul>
+  `;
+
+  console.log(markup);
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>
