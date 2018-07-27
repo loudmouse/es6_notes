@@ -10,7 +10,7 @@ You can find the course materials here: [es6.io](https://es6.io/)
 - [x] Function Improvements: Arrows and Default Arguments
 - [x] Template Strings
 - [x] Additional String Improvements
-- [ ] Destructuring
+- [x] Destructuring
 - [ ] Iterables & Looping
 - [ ] An Array of Array Improvements
 - [ ] Say Hello to ...Spread and ...Rest

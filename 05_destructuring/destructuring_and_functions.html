@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring in Action!</title>
+</head>
+<body>
+<script>
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GPB: amount * 0.53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const { USD, GPB, AUD, MEX } = convertCurrency(100);
+  console.log(USD, GPB, AUD, MEX)
+
+  // desctructing into a function with the total, tip, and tax
+  // tip and tax are given a default
+  function tipCalc({ total, tip = 0.15, tax = 0.13 }) {
+    return total + (tip * total) + (tax * total);
+  };
+
+
+  const bill = tipCalc({ total: 200, tip: 0.2, tax: 0.13 });
+
+  // the function can be called with values in any orders, example:
+  // const bill = tipCalc({ tax: 0.13, tip: 0.2, total: 200 });
+
+  // the optional values don't have to be called and will instead
+    // pull the defaults if nothing is present, ie. if tip or tax is not called explicitly.
+    // the default 15% tip and 13% tax is used in the function
+  // const bill = tipCalc({ total: 200 });
+  
+  console.log(bill)
+</script>
+</body>
+</html>
