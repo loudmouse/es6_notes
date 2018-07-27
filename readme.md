@@ -9,7 +9,7 @@ You can find the course materials here: [es6.io](https://es6.io/)
 - [x] New Variables — Creation, Updating and Scoping
 - [x] Function Improvements: Arrows and Default Arguments
 - [x] Template Strings
-- [ ] Additional String Improvements
+- [x] Additional String Improvements
 - [ ] Destructuring
 - [ ] Iterables & Looping
 - [ ] An Array of Array Improvements
