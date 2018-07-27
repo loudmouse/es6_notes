@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring!</title>
+</head>
+<body>
+<script>
+
+  // a javascript object seems to be similar to a ruby hash
+  const person = {
+    first: 'Wes',
+    last: 'Bos',
+    country: 'Canada',
+    city: 'Hamilton',
+    twitter: '@wesbos'
+  };
+
+  // use curly { } brackets to desctructure (pull from) and javascript object
+  const { first, last } = person;
+
+  const wes = {
+    first: 'Wes',
+    last: 'Bos',
+    links: {
+      social: {
+        twitter: 'https://twitter.com/wesbos',
+        facebook: 'https://facebook.com/wesbos.developer',
+      },
+      web: {
+        blog: 'https://wesbos.com'
+      }
+    }
+  };
+
+
+  // pulling out nested data OLD way
+    // const twitter = wes.links.social.twitter;
+    // const facebook = wes.links.social.facebook;
+
+  // pulling out nested data NEW way
+  const { twitter, facebook } = wes.links.social;
+
+  // renaming your variables by adding colon (:) and the new name you'd like to refer to.
+  //  could now type wordpress into console and will get "https://wesbos.com"
+  const { blog:wordpress } = wes.links.web;
+
+  const settings = { width: 300, color: 'black' } //height, fontSize
+
+  // add default fallback values by using the equal (=) and a value. When you call the decoupled variable
+  // it will first look for if a value is set but if not set it will return the default set with the (=).
+  const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+
+
+  // object restructuring with variable renaming and default values
+  // const { w: width = 400, h: height = 500 } = { w: 800}
+
+
+</script>
+</body>
+</html>
